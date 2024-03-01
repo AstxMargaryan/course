@@ -1,0 +1,12 @@
+<body>
+    <h1>Rate Course</h1>
+    <form action="{% url 'rate_course' %}" method="post">
+        {% csrf_token %}
+        <!-- Add your form fields here -->
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" name="rating" min="1" max="5" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+

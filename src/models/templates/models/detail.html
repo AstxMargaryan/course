@@ -1,0 +1,20 @@
+<head>
+    <title>Course Detail</title>
+</head>
+<body>
+    <h1>Course Detail</h1>
+
+    <div>
+        <h2>Course Title: {{ course.title }}</h2>
+        <p>Description: {{ course.description }}</p>
+        <p>Rate: {{ course.rate }}</p>
+        <form action="{% url 'models:rate_course' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" name="rate_course">Rate</button>
+        </form>
+    </div>
+</body>
+
+
+
+
